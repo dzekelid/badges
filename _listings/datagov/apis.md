@@ -28,7 +28,7 @@ apis:
   tags: Badges
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery/badges/master/_listings/datagov/datasets-dataset-badges-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery/badges/master/_listings/datagov/datasets-dataset-badges-badge-kind-delete.md
 x-common:
 - type: x-blog
   url: https://www.data.gov/meta/
