@@ -29,15 +29,17 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery/badges/master/_listings/datagov/reuses-reuse-badges-badge-kind-delete.md
-- name: Data.gov API Add Reuses Reuse Badges
-  description: Create a new badge for a given reuse
+- name: Data.gov API Delete Reuses Reuse Badges Badge Kind
+  description: Delete a badge for a given reuse
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
   humanURL: http://data.gov/
   baseURL: https://catalog.data.gov//api/3/
   tags: Badges
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/datagov/reuses-reuse-badges-post.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/datagov/reuses-reuse-badges-badge-kind-delete.md
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/datagov/reuses-reuse-badges-badge-kind-delete-postman.md
 x-common:
 - type: x-blog
   url: https://www.data.gov/meta/
