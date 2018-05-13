@@ -26,19 +26,21 @@ modified: "2018-05-12"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Stack Exchange Get Badge Recipients
-  description: "Returns recently awarded badges in the system.\n \nAs these badges
-    have been awarded, they will have the badge.user property set.\n \nThis method
-    returns a list of badges."
+- name: Stack Exchange Get Badge Tags
+  description: "Returns the badges that are awarded for participation in specific
+    tags.\n \nFor the rank sort, bronze is greater than silver which is greater than
+    gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver
+    for just silver, and min=bronze for just bronze.\n \nrank is the default sort.\n
+    \nThis method returns a list of badges."
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
   humanURL: https://stackexchange.com/
   baseURL: https://api.stackexchange.com//2.2
   tags: Badges
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badges-recipients-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badges-tags-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badges-recipients-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badges-tags-get-postman.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication
