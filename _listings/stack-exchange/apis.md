@@ -26,8 +26,16 @@ modified: "2018-05-12"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/apis.md
 specificationVersion: "0.14"
 apis:
-- name: Stack Exchange My Badges
-  description: "Returns the badges earned by the user associated with the given access_token.\n
+- name: Stack Exchange Get User Badges
+  description: "Get the badges the users in {ids} have earned.\n \nBadge sorts are
+    a tad complicated. For the purposes of sorting (and min/max) tag_based is considered
+    to be greater than named.\n \nThis means that you can get a list of all tag based
+    badges a user has by passing min=tag_based, and conversely all the named badges
+    by passing max=named, with sort=type.\n \nFor ranks, bronze is greater than silver
+    which is greater than gold. Along with sort=rank, set max=gold for just gold badges,
+    max=silver&min=silver for just silver, and min=bronze for just bronze.\n \nrank
+    is the default sort.\n \n{ids} can contain up to 100 semicolon delimited ids,
+    to find ids programatically look for user_id on user or shallow_user objects.\n
     \nThis method returns a list of badges."
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
   humanURL: https://stackexchange.com/
@@ -35,9 +43,9 @@ apis:
   tags: Badges
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/me-badges-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/users-ids-badges-get.md
   - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/me-badges-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/users-ids-badges-get-postman.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication
