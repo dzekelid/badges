@@ -1,32 +1,139 @@
 ---
 name: Stack Exchange
-description: Stack Exchange is a network of question and answer websites on diverse
-  topics in many different fields, each site covering a specific topic, where questions,
-  answers, and users are subject to a reputation award process. The sites are modeled
-  after Stack Overflow, a forum for computer programming questions that was the original
-  site in this network. The reputation system is designed to allow the sites to be
-  self-moderating.
-image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
+x-slug: stack-exchange
+description: After someone asks a question, members of the community propose answers.
+  Others vote on those answers. Very quickly, the answers with the most votes rise
+  to the top. You don???t have to read through a lot of discussion to find the best
+  answer.    Like to...
+image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
 x-kinRank: "8"
-x-alexaRank: ""
-tags:
-- Streamrank
-- Stack
-- Question Answer
-- Plug in
-- My API Stack
-- Media
-- Imports
-- Content
-- Code
-- Citations
-- Answers
-created: "2018-05-12"
-modified: "2018-05-12"
+x-alexaRank: "126"
+tags: Badges
+created: "2018-06-17"
+modified: "2018-06-17"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/apis.md
 specificationVersion: "0.14"
 apis:
+- name: Stack Exchange Get Badges
+  x-api-slug: stack-exchange
+  description: "Returns all the badges in the system.\n \nBadge sorts are a tad complicated.
+    For the purposes of sorting (and min/max) tag_based is considered to be greater
+    than named.\n \nThis means that you can get a list of all tag based badges by
+    passing min=tag_based, and conversely all the named badges by passing max=named,
+    with sort=type.\n \nFor ranks, bronze is greater than silver which is greater
+    than gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver
+    for just silver, and min=bronze for just bronze.\n \nrank is the default sort.\n
+    \nThis method returns a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//badges
+  tags: Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badges-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badges-get-openapi.md
+- name: Stack Exchange Get Badge Name
+  x-api-slug: stack-exchange
+  description: "Gets all explicitly named badges in the system.\n \nA named badged
+    stands in opposition to a tag-based badge. These are referred to as general badges
+    on the sites themselves.\n \nFor the rank sort, bronze is greater than silver
+    which is greater than gold. Along with sort=rank, set max=gold for just gold badges,
+    max=silver&min=silver for just silver, and min=bronze for just bronze.\n \nrank
+    is the default sort.\n \nThis method returns a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//badges/name
+  tags: Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesname-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesname-get-openapi.md
+- name: Stack Exchange Get Badge Recipients
+  x-api-slug: stack-exchange
+  description: "Returns recently awarded badges in the system.\n \nAs these badges
+    have been awarded, they will have the badge.user property set.\n \nThis method
+    returns a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//badges/recipients
+  tags: Badges,Recipients
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesrecipients-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesrecipients-get-openapi.md
+- name: Stack Exchange Get Badge Tags
+  x-api-slug: stack-exchange
+  description: "Returns the badges that are awarded for participation in specific
+    tags.\n \nFor the rank sort, bronze is greater than silver which is greater than
+    gold. Along with sort=rank, set max=gold for just gold badges, max=silver&min=silver
+    for just silver, and min=bronze for just bronze.\n \nrank is the default sort.\n
+    \nThis method returns a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//badges/tags
+  tags: Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgestags-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgestags-get-openapi.md
+- name: Stack Exchange Get Badge
+  x-api-slug: stack-exchange
+  description: "Gets the badges identified in id.\n \nNote that badge ids are not
+    constant across sites, and thus should be looked up via the /badges method. A
+    badge id on a single site is, however, guaranteed to be stable.\n \nBadge sorts
+    are a tad complicated. For the purposes of sorting (and min/max) tag_based is
+    considered to be greater than named.\n \nThis means that you can get a list of
+    all tag based badges by passing min=tag_based, and conversely all the named badges
+    by passing max=named, with sort=type.\n \nFor ranks, bronze is greater than silver
+    which is greater than gold. Along with sort=rank, set max=gold for just gold badges,
+    max=silver&min=silver for just silver, and min=bronze for just bronze.\n \nrank
+    is the default sort.\n \n{ids} can contain up to 100 semicolon delimited ids,
+    to find ids programatically look for badge_id on badge objects.\n \nThis method
+    returns a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//badges/{ids}
+  tags: Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesids-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesids-get-openapi.md
+- name: Stack Exchange Get Badge Recipients
+  x-api-slug: stack-exchange
+  description: "Returns recently awarded badges in the system, constrained to a certain
+    set of badges.\n \nAs these badges have been awarded, they will have the badge.user
+    property set.\n \n{ids} can contain up to 100 semicolon delimited ids, to find
+    ids programatically look for badge_id on badge objects.\n \nThis method returns
+    a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//badges/{ids}/recipients
+  tags: Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesidsrecipients-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/badgesidsrecipients-get-openapi.md
+- name: Stack Exchange My Badges
+  x-api-slug: stack-exchange
+  description: "Returns the badges earned by the user associated with the given access_token.\n
+    \nThis method returns a list of badges."
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//me/badges
+  tags: Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/mebadges-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/mebadges-get-openapi.md
 - name: Stack Exchange Get User Badges
+  x-api-slug: stack-exchange
   description: "Get the badges the users in {ids} have earned.\n \nBadge sorts are
     a tad complicated. For the purposes of sorting (and min/max) tag_based is considered
     to be greater than named.\n \nThis means that you can get a list of all tag based
@@ -37,15 +144,28 @@ apis:
     is the default sort.\n \n{ids} can contain up to 100 semicolon delimited ids,
     to find ids programatically look for user_id on user or shallow_user objects.\n
     \nThis method returns a list of badges."
-  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/253_logo.png
-  humanURL: https://stackexchange.com/
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
+  baseURL: https://api.stackexchange.com//2.2//users/{ids}/badges
+  tags: Users,Badges
+  properties:
+  - type: x-postman-collection
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/usersidsbadges-get-postman.md
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/usersidsbadges-get-openapi.md
+- name: Stack Exchange
+  x-api-slug: stack-exchange
+  description: After someone asks a question, members of the community propose answers.
+    Others vote on those answers. Very quickly, the answers with the most votes rise
+    to the top. You don???t have to read through a lot of discussion to find the best
+    answer.    Like to...
+  image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/253-stack-exchange.jpg
+  humanURL: http://stackexchange.com
   baseURL: https://api.stackexchange.com//2.2
   tags: Badges
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/users-ids-badges-get.md
-  - type: x-postman-collection
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/users-ids-badges-get-postman.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/stack-exchange/openapi.md
 x-common:
 - type: x-authentication
   url: https://api.stackexchange.com/docs/authentication
@@ -57,8 +177,14 @@ x-common:
   url: http://blog.stackoverflow.com/feed/
 - type: x-crunchbase
   url: http://www.crunchbase.com/company/stack-exchange
+- type: x-crunchbase
+  url: https://crunchbase.com/organization/stack-exchange
 - type: x-developer
   url: http://api.stackexchange.com/
+- type: x-email
+  url: legal@stackexchange.com
+- type: x-email
+  url: team@stackexchange.com
 - type: x-email
   url: team+api@stackexchange.com
 - type: x-error-codes
@@ -79,6 +205,8 @@ x-common:
   url: http://stackexchange.com/legal/api-terms-of-use
 - type: x-twitter
   url: https://twitter.com/StackExchange
+- type: x-website
+  url: http://stackexchange.com
 - type: x-website
   url: https://stackexchange.com/
 include: []
