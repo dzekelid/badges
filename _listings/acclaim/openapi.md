@@ -1,9 +1,9 @@
 ---
 swagger: "2.0"
-x-collection-name: Foursquare
+x-collection-name: Acclaim
 x-complete: 1
 info:
-  title: Foursquare
+  title: Acclaim
   version: 1.0.0
 schemes:
 - http
