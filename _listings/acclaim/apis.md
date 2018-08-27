@@ -9,8 +9,8 @@ image: http://kinlane-productions.s3.amazonaws.com/screen-capture-api/28773-www-
 x-kinRank: "7"
 x-alexaRank: "35423"
 tags: Badges
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/acclaim/apis.md
 specificationVersion: "0.14"
 apis: []

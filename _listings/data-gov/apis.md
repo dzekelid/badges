@@ -12,8 +12,8 @@ image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/l
 x-kinRank: "10"
 x-alexaRank: "0"
 tags: Badges
-created: "2018-08-25"
-modified: "2018-08-25"
+created: "2018-08-27"
+modified: "2018-08-27"
 url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/apis.md
 specificationVersion: "0.14"
 apis:
@@ -30,6 +30,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/datasetsbadges-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/datasetsbadges-get-openapi.md
+- name: Data.gov API - Add Datasets Dataset Badges
+  x-api-slug: datasetsdatasetbadges-post
+  description: Create a new badge for a given dataset
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/datasetsdatasetbadges-post-openapi.md
 - name: Data.gov API - Delete Datasets Dataset Badges Badge Kind
   x-api-slug: datasetsdatasetbadgesbadge-kind-delete
   description: Delete a badge for a given dataset
@@ -56,6 +67,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/organizationsbadges-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/organizationsbadges-get-openapi.md
+- name: Data.gov API - Add Organizations Org Badges
+  x-api-slug: organizationsorgbadges-post
+  description: Create a new badge for a given organization
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/organizationsorgbadges-post-openapi.md
 - name: Data.gov API - Delete Organizations Org Badges Badge Kind
   x-api-slug: organizationsorgbadgesbadge-kind-delete
   description: Delete a badge for a given organization
@@ -82,6 +104,17 @@ apis:
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/reusesbadges-get-postman.md
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/reusesbadges-get-openapi.md
+- name: Data.gov API - Add Reuses Reuse Badges
+  x-api-slug: reusesreusebadges-post
+  description: Create a new badge for a given reuse
+  image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/data-gov-logo.png
+  humanURL: http://data.gov/
+  baseURL: https://catalog.data.gov//api/3/
+  tags: Federal Government, Federal Government, Federal Government   GSA, Stack Network,
+    Data Provider, API Provider, Profiles, General Data
+  properties:
+  - type: x-openapi-spec
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/badges/master/_listings/data-gov/reusesreusebadges-post-openapi.md
 - name: Data.gov API - Delete Reuses Reuse Badges Badge Kind
   x-api-slug: reusesreusebadgesbadge-kind-delete
   description: Delete a badge for a given reuse
